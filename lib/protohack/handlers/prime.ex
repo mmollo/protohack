@@ -2,6 +2,8 @@ defmodule Protohack.Handler.Prime do
   use ThousandIsland.Handler
   require Logger
 
+  # Probably a very bad idea to only process everything when the timeout
+  # occurs.
   @impl ThousandIsland.Handler
   def handle_data(data, socket, state) do
     case ThousandIsland.Socket.recv(socket, 0, 100) do
