@@ -17,7 +17,8 @@ defmodule Protohack.Application do
   defp handlers do
     [
       {:echo, 5555, Protohack.Handler.Echo},
-      {:prime, 5556, Protohack.Handler.Prime}
+      {:prime, 5556, Protohack.Handler.Prime},
+      {:queries, 5557, Protohack.Handler.Queries}
     ]
   end
 end
